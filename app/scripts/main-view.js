@@ -6,7 +6,7 @@ var MainView = Backbone.View.extend({
 
 		$.when(winner.fetch()).then(function() {
 		  _.each(winner.models, function(data){
-		  new GallerWinnerView({model: data});
+		  new GalleryWinnerView({model: data});
 		  })
 		});
 
