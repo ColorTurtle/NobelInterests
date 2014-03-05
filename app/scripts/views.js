@@ -1,11 +1,11 @@
 var AboutView = Backbone.View.extend({
 
-	className: 'container',
+	// className: 'container',
 
 	aboutTemplate: _.template($('#about-template').text()),
 
 	initialize: function(){
-		$('.main-area').html( this.el );
+		$('.js-main-area').html( this.el );
 		this.render();
 
 	},
@@ -17,12 +17,12 @@ var AboutView = Backbone.View.extend({
 });
 
 var GalleryWinnerView = Backbone.View.extend({
-	className: 'artist-small col-md-4',
+	className: 'artist-small col-md-3',
 
 	aboutTemplate: _.template($('#artist-small-template').text()),
 
 	initialize: function(){
-		$('.main-selection-area').append( this.el );
+		$('.js-main-selection-area').append( this.el );
 		this.render()
 	},
 
