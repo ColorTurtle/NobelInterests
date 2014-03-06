@@ -13,6 +13,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 body {
     // padding-top: 20px;
     // padding-bottom: 20px;
+    background-color: #3E3F49;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -23,21 +24,73 @@ body {
     padding-right: 15px;
 }
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
+// Overwriting Bootstrap defaults
 
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
+.navbar-area {
+    .nav-options {
+        padding-left: 0px;
+        font-size: 18px;
+
+        .branding {
+            background-color: rgb(30, 31, 37);
+            width: 100%;
+            padding: 10px 0px;
+
+            .text-muted {
+                color: #FC3386;
+            }
+        }
+
+        a {
+            color: #fff;
+        }
+
+        img {
+            width: 40px;
+            filter: grayscale(100%);
+        }
+
+        span {
+            padding-left: 10px;
+
+            &.no-face {
+                padding-left: 53px;
+                font-size: 22px;
+            }
+        }
+
+        .nav-option {
+            border-bottom: 1px solid gray;
+            padding: 15px 0px;
+
+            &:hover {
+                border-bottom: 1px solid #373847;
+                background-color: none;
+            }
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+
+            a {
+                color: #FC3386;
+                text-decoration: none;
+            }
+        }
+        }
     }
+
+    
+}
+
+.main-area {
+   
 }
 
 .selection-area {
     position: relative;
+    padding: 0px;
 
     .main-selection-area {
         padding: 0px;
@@ -89,12 +142,6 @@ body {
     }
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
 
 .container-narrow > hr {
     margin: 30px 0;
@@ -107,14 +154,6 @@ body {
     .btn {
         font-size: 21px;
         padding: 14px 24px;
-    }
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-    p + h4 {
-        margin-top: 28px;
     }
 }
 
