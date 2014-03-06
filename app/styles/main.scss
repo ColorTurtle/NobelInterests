@@ -32,7 +32,7 @@ body {
 
     .nav-options {
         padding-left: 0px;
-        font-size: 22px;
+        font-size: 30px;
 
         .branding {
             background-color: rgb(30, 31, 37);
@@ -42,7 +42,7 @@ body {
             .text-muted {
                 color: #FC3386;
                 font-family: 'IM Fell English', serif;
-                font-size: 36px;
+                font-size: 50px;
                 letter-spacing: .05em;
             }
         }
@@ -61,18 +61,18 @@ body {
             letter-spacing: .05em;
 
             &.no-face {
-                padding-left: 53px;
-                font-size: 30px;
+                padding-left: 60px;
+                font-size: 40px;
                 letter-spacing: .05em;
             }
         }
 
         .nav-option {
-            border-bottom: 1px solid gray;
+            border-bottom: 1px solid #373847;
             padding: 15px 0px;
 
             &:hover {
-                border-bottom: 1px solid #373847;
+                border-bottom: 1px solid gray;
                 background-color: none;
             }
 
