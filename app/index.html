@@ -27,49 +27,48 @@
         <![endif]-->
 
 
+        
+        <div class="main-area js-main-area">
+        </div>
         <div class="selection-area row">
             <div class="navbar-area col-lg-3">
                 <div class="nav-options">
-                <h3 class="text-muted">Pop Rocks</h3>
-                <ul class="nav nav-pills">
-                    <li class="nav-option btn-block"><a href="#"><span>About</span></a></li>
-                    <li class="nav-option btn-block"> <a href="happy"><img src="images/happy-face.png"><span>Happy</span></a> </li>
-                    <li class="nav-option btn-block"> <a href="happy"><img src="images/angry-face.png"><span>Angry</span></a> </li>
-                    <li class="nav-option btn-block"> <a href="happy"><img src="images/happy-face.png"><span>Relaxed</span></a> </li>
-                    <li class="nav-option btn-block"> <a href="happy"><img src="images/happy-face.png"><span>Exciting</span></a> </li>
-                    <li class="nav-option btn-block"> <a href="happy"><img src="images/happy-face.png"><span>Sad</span></a> </li>
-                </ul>
+                    <div class="text-center branding">
+                        <h3 class="text-muted">Moody Rocker</h3>
+                    </div>
+                    <ul class="navlist">
+                        <li class="nav-option btn-block"><a href="#"><span class="no-face">About</span></a></li>
+                        <li class="nav-option btn-block"> <a href="happy"><img src="images/happy-face2.png"><span>Happy</span></a></li>
+                        <li class="nav-option btn-block"> <a href="angry"><img src="images/angry-face2.png"><span>Angry</span></a></li>
+                        <li class="nav-option btn-block"> <a href="relaxed"><img src="images/relaxed-face.png"><span>Relaxed</span></a></li>
+                        <li class="nav-option btn-block"> <a href="happy"><img src="images/excited-face.png"><span>Exciting</span></a></li>
+                        <li class="nav-option btn-block"> <a href="sad"><img src="images/sad-face.png"><span>Sad</span></a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="row js-main-selection-area main-selection-area selection-area col-lg-9">
-                <div class="expanded-container js-expanded-container">
-                    <div class="artist-small-template js-artist-small-template col-md-3" style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/1/1e/Thelonious_Monk%2C_Howard_McGhee%2C_Roy_Eldridge%2C_and_Teddy_Hill%2C_Minton%27s_Playhouse%2C_New_York%2C_N.Y.%2C_ca._Sept._1947_%28William_P._Gottlieb_06201%29.jpg)"> 
-                        <h3>Thelonious Monk</h3>
-                        
-                    </div>
-                    <div class="artist-small-template js-artist-small-template col-md-3" style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/1/1e/Thelonious_Monk%2C_Howard_McGhee%2C_Roy_Eldridge%2C_and_Teddy_Hill%2C_Minton%27s_Playhouse%2C_New_York%2C_N.Y.%2C_ca._Sept._1947_%28William_P._Gottlieb_06201%29.jpg)"> 
-                        <h3>Thelonious Monk</h3>
-                        
-                    </div>
-                    <div class="artist-small-template js-artist-small-template col-md-3" style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/1/1e/Thelonious_Monk%2C_Howard_McGhee%2C_Roy_Eldridge%2C_and_Teddy_Hill%2C_Minton%27s_Playhouse%2C_New_York%2C_N.Y.%2C_ca._Sept._1947_%28William_P._Gottlieb_06201%29.jpg)"> 
-                        <h3>Thelonious Monk</h3>
-                        
-                    </div>
-                    <div class="artist-small-template js-artist-small-template col-md-3" style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/1/1e/Thelonious_Monk%2C_Howard_McGhee%2C_Roy_Eldridge%2C_and_Teddy_Hill%2C_Minton%27s_Playhouse%2C_New_York%2C_N.Y.%2C_ca._Sept._1947_%28William_P._Gottlieb_06201%29.jpg)"> 
-                        <h3>Thelonious Monk</h3>
-                        
-                    </div>
-                </div>
+            <div class="row col-lg-9 main-selection-area js-main-selection-area">
+                <div class="expanded-container js-expanded-container"></div>
             </div>
         </div>
-        <script type="text/template" id="about-templateDisabled">
+
+        <script type="text/template" id="about-template">
             <h2>Motto/Tagline</h2>
             <p>Freegan flannel photo booth wolf vinyl. Wayfarers Pinterest single-origin coffee you probably have not heard of them mustache jean shorts. Cardigan chillwave mixtape, authentic pickled bespoke forage messenger bag fashion axe Helvetica hoodie Austin 1990. Keytar mumblecore pug, before they sold out chambray sartorial literally Truffaut Cosby sweater ennui chillwave fanny pack Shoreditch meggings polaroid. Ugh PBR&amp;B before they sold out, chillwave readymade cred dreamcatcher kale chips. Lomo cred banjo hella keffiyeh beard. Messenger bag chillwave biodiesel, literally pour-over Intelligentsia PBR iPhone Etsy polaroid typewriter forage paleo next level mlkshk.</p>
             <span class="calltoaction">Start Your Search Below!</span>
         </script>
-        <script type="text/template" id="artist-small-template">
-            <img src="">
 
+        <script type="text/template" id="artist-small-template">
+                <img class="artist-small-image js-artist-small-click"src="<%= this.model.attributes.images[0].url %>">
+                <div class="artist-small-copy js-artist-small-click"> 
+                    <h3 class=""><%= this.model.attributes.name %></h3>
+                </div>
+        </script>
+
+        <script type="text/template" id="artist-expanded-template">
+                <div class="artist-exp-copy"> 
+                    <h3 class=""><%= this.model.attributes.name %></h3>
+                    <img class="waffle js-close"src="images/x.png">
+                </div>
         </script>
 
 

@@ -11,8 +11,9 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 /* Space out content a bit */
 body {
-    padding-top: 0px;
-    padding-bottom: 20px;
+    // padding-top: 20px;
+    // padding-bottom: 20px;
+    background-color: #3E3F49;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -27,8 +28,22 @@ body {
 
 .navbar-area {
     .nav-options {
-        padding-left: 10px;
+        padding-left: 0px;
         font-size: 18px;
+
+        .branding {
+            background-color: rgb(30, 31, 37);
+            width: 100%;
+            padding: 10px 0px;
+
+            .text-muted {
+                color: #FC3386;
+            }
+        }
+
+        a {
+            color: #fff;
+        }
 
         img {
             width: 40px;
@@ -37,13 +52,30 @@ body {
 
         span {
             padding-left: 10px;
+
+            &.no-face {
+                padding-left: 53px;
+                font-size: 22px;
+            }
         }
 
         .nav-option {
-            
+            border-bottom: 1px solid gray;
+            padding: 15px 0px;
+
+            &:hover {
+                border-bottom: 1px solid #373847;
+                background-color: none;
+            }
+
         &:hover {
             img {
                 filter: grayscale(0);
+            }
+
+            a {
+                color: #FC3386;
+                text-decoration: none;
             }
         }
         }
@@ -60,26 +92,54 @@ body {
     position: relative;
     padding: 0px;
 
-    .artist-small-template {
-        height: 300px;
-        background-size: 315px;
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        margin: 0px;
+    .main-selection-area {
         padding: 0px;
 
-        h3 {
-            color: white;
-            text-shadow: 1px 2px 2px black;
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-            padding: 15px;
+        .expanded-container {
+            position: fixed;
+            z-index: 5;
+            background: rgba(0, 0, 0, 0.6);
+            width: 100%;
+
+            .artist-expanded-container {
+            
+                // background: gray;
+            }
+
+            .waffle {
+                height: 50px;
+                color: red;
+                width: auto;
+            }
+        }
+
+        .artist-small-container {
+            height: 265px;
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+
+            .artist-small-image {
+                filter: grayscale(60%);
+                position: absolute;
+                height: 100%;
+                width: 100%;
+
+                &:hover {
+                filter: grayscale(0%);
+                }
+            }
+
+            h3 {
+                color: white;
+                text-shadow: 1px 2px 2px black;
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                padding: 15px;
+            }
         }
     }
-    
 }
 
 
