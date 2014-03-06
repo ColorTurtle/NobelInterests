@@ -1,6 +1,6 @@
 var AboutView = Backbone.View.extend({
 
-	className: 'container',
+	// className: 'container',
 
 	aboutTemplate: _.template($('#about-template').text()),
 
