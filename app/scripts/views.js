@@ -46,6 +46,10 @@ var ExpandedView = Backbone.View.extend({
 
 	aboutTemplate: _.template($('#artist-expanded-template').text()),
 
+	events: {
+		"click .js-close": "remove"
+	},
+
 	initialize: function(){
 		$('.js-expanded-container').append( this.el );
 		this.render()
@@ -55,15 +59,3 @@ var ExpandedView = Backbone.View.extend({
 		this.$el.append(this.aboutTemplate({model: this.model}))
 	}
 })
-
-
-
-
-
-
-
-
-
-
-
-
