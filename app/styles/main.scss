@@ -61,7 +61,6 @@ body {
             letter-spacing: .05em;
 
             &.no-face {
-                padding-left: 60px;
                 font-size: 40px;
                 letter-spacing: .05em;
             }
@@ -219,5 +218,21 @@ body {
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
         border-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 910px) { 
+
+.navbar-area .nav-options span {
+    font-size: 22px;
+    padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+
+.navbar-area .nav-options span {
+    font-size: 30px;
+    padding-left: 25px;
     }
 }

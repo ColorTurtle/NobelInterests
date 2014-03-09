@@ -17,7 +17,7 @@ var AboutView = Backbone.View.extend({
 });
 
 var GalleryWinnerView = Backbone.View.extend({
-	className: 'artist-small-container js-artist-small-container col-md-3',
+	className: 'artist-small-container js-artist-small-container col-md-3 col-sm-3',
 
 	aboutTemplate: _.template($('#artist-small-template').text()),
 
@@ -42,7 +42,7 @@ var GalleryWinnerView = Backbone.View.extend({
 });
 
 var ExpandedView = Backbone.View.extend({
-	className: 'artist-expanded-container  col-lg-12',
+	className: 'artist-expanded-container  col-lg-12 col-md-12 col-sm-12',
 
 	aboutTemplate: _.template($('#artist-expanded-template').text()),
 
