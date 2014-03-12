@@ -68,19 +68,19 @@
         </script>
 
         <script type="text/template" id="artist-expanded-template">
-                <button type="button" class="close js-close">X</button>
-                <div class="row">
-                    <div class="profile-img col-lg-4">
+                <button type="button" class="pull-left close js-close">X</button>
+                <div class="row col-lg-12 col-md-12 col-sm-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <img class="col-lg-12 js-artist-small-click"src="<%= this.model.attributes.images[1].url %>">
                     </div>
-                    <div class="artist-bio col-lg-4">
+                    <div class="artist-bio col-lg-4 col-md-4 col-sm-4">
                         <h1 class="artist-title"><%= this.model.attributes.name %></h1>
                         <h4 class="col-lg-12">Where: <%= this.model.attributes.artist_location.location %></h4>
                         <h4 class="col-lg-12">Artist Sexxy Level: <%= this.model.attributes.hotttnesss %></h4>
                         <h4 class="col-lg-12">Music Level: <%= this.model.attributes.discovery %></h4>
                         <h4 class="col-lg-12">Popularity Level <%= this.model.attributes.familiarity %></h4>
                     </div>
-                    <div class="profile-img col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <img class="col-lg-12 js-artist-small-click"src="<%= this.model.attributes.images[2].url %>">
                     </div>
                 </div>
